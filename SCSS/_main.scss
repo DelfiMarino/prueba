@@ -1,0 +1,1460 @@
+body{
+    font-family: $fuente;
+}
+#header{	
+	background-color: #ffff;	
+	position: fixed;
+	width: 100%;
+	height: auto;
+	align-items: center;
+  margin-top:0;
+  z-index: 2;
+  .container{
+    margin-left: 33px;
+    height: auto;
+    width: auto;
+    background-color:  #ffff; 
+  }
+  .navbar-nav{
+    margin-left: -170px;
+    margin-top: 30px;
+  }
+  .logo{
+    margin-right: 300px;
+    height: 70px;
+    width: 154px;
+  }
+  li a{
+    color: #ed2d38; 
+    font-size: 1.5rem;
+    font-weight: 400;
+    &:hover {
+      color: #3f4042;
+    }
+  }
+}
+#carouselExampleCaptions{
+  z-index: 1;
+  .fotoUno{
+    font-size: 7.25rem;
+    color:$color-texto-slider;
+    margin-bottom: 195px;  
+  }
+}  
+.bgHistoria{
+  @include bg-historia;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;     
+}  
+#seccionUno{
+  background-color: $color-bordo;
+  color: $color-bgBlack;
+  width: 100%;
+  margin: auto;
+  min-height: 113px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  .tituloSu{
+    @include titulo-hueso;
+    margin-top: 60px;
+    margin-left: 30px;
+  }
+  .textSu{
+    @include  text-his;
+    margin-left: 30px;
+  }   
+}
+/*SECCION DOS*/
+#seccionDos{
+  width: 100%;
+  margin: auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .rec{
+    border: 0;
+    margin-left: auto;
+    margin-top: 100px;
+    margin-bottom: 40px; 
+  }
+  .botonTar{	
+    padding-left: 100px;
+    color: $color-bordo;
+    &:hover{  
+      color: $color-bordo;
+    }
+  }
+  .texTi{
+    @include tex-ti;
+  }
+  .textAl{
+    @include tex-al;
+  }
+}
+/*SECCION CUATRO*/
+.ml-5 {
+  margin-left: 4rem;
+}  
+#promociones{
+  width: 100%;
+  margin: auto;
+  height: 500px;
+  display: flex;
+  margin-bottom: 30px;
+  flex-direction: column;
+  background-image: url("../multimedia/bgwood.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .tituloDestacados{
+    @include titulo-hueso;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    padding-left: 30px;
+  }
+  .row{
+    margin-left: 26px;
+    .card{
+      border: 1px solid $color-bordo;
+      width: 13rem;
+      height: 300px;
+      overflow: hidden; 
+      .tituloCarDes{
+        @include tex-ti;
+      }
+      .textCardDes{
+        @include tex-al;
+      }
+      &:hover{
+        background-image: linear-gradient(rgba(169,50,38,0.8),rgba(169,50,38,0.8));
+        background-size: 208px 30px;
+        transition:all .5s ease;
+        button{
+          transform:translateX(0%); 
+          transition:all .3s ease;
+        }
+        .tituloCarDes, .textCardDes{
+          display: none;
+        }
+        &:before, &:after{
+          width: 90%;
+        }     
+      }
+      &:before{
+        position: absolute;
+        top:335px; 
+        left:20px;
+        content:""; 
+        width:0%; 
+        height:3px; 
+        background:#000;
+        transition:all .3s ease;    
+      }
+      &:after{
+        position: absolute; 
+        top:10px; 
+        right:20px; 
+        content:""; 
+        width:0%; 
+        height:3px; 
+        background:#000;
+        transition:all .3s ease;    
+      }
+      button{
+        margin: 133px 0px 0px 44px;
+        position: absolute;
+        left: 26px;
+        top: 100px;
+        transform:translateX(-334%); 
+        transition:all .4s ease;       
+      } 
+    }
+  }
+}
+.bgPromociones{
+  background-image: url("../multimedia/bgwood.jpg");
+}
+/*SECCION TRES*/
+.bgProdPar{
+  background-color: $color-white;
+}
+#productosParu{
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; 
+  height: 500px;
+  .subParTromen{
+    @include titulo-hueso;
+    padding-left: 53px;
+  }
+  .destacados-1{
+    display: block;
+    margin-right: auto;
+    margin-left: -280px;
+    overflow: hidden;
+    position:relative; 
+    top:125px; 
+    width: 330px; 
+    height:330px; 
+    background:url("../multimedia/destacados-1.jpg"); 
+    background-size:100% 100%;
+    overflow:hidden;
+    color:#000;
+    border: 2px solid #3f4042;
+    &:hover{
+      background-image: linear-gradient(rgba(169,50,38,0.8),rgba(169,50,38,0.8)), url("../multimedia/destacados-1.jpg");
+      background-size: 110% 110%;
+      transition:all .5s ease;
+      h1, button{
+        transform:translateX(0%); 
+        transition:all .3s ease;
+      }
+      &:before, &:after{
+        width: 90%;
+      } 
+    }
+    &:before{
+      position: absolute;
+      top:335px; 
+      left:20px;
+      content:""; 
+      width:0%; 
+      height:3px; 
+      background:#000;
+      transition:all .3s ease;
+    }
+    &:after{
+      position: absolute; 
+      top:10px; 
+      right:20px; 
+      content:""; 
+      width:0%; 
+      height:3px; 
+      background:#000;
+      transition:all .3s ease;
+    }
+    h1{
+      margin: 100px 0px 0px 40px;
+      position:absolute; 
+      left:-18px;
+      top:30px; 
+      transform:translateX(-120%);
+      transition:all .5s ease;
+    }
+    button{
+      margin: 90px 0px 0px 40px;
+      position:absolute; 
+      left:112px;
+      top:100px; 
+      transform:translateX(-334%); 
+      transition:all .4s ease;  
+    }
+  }
+  .destacados-2{
+    display: block;
+    margin-right: auto;
+    margin-left: -280px;
+    overflow: hidden;
+    position:relative; 
+    top:125px; 
+    width: 330px; 
+    height:330px; 
+    background:url("../multimedia/destacados-2.jpeg"); 
+    background-size:100% 100%;
+    overflow:hidden;
+    color:#000;
+    border: 2px solid #3f4042;
+    &:hover{
+      background-image: linear-gradient(rgba(169,50,38,0.8),rgba(169,50,38,0.8)), url("../multimedia/destacados-2.jpeg");
+      background-size: 110% 110%;
+      transition:all .5s ease;
+      h1, button{
+        transform:translateX(0%); 
+        transition:all .3s ease;
+      }
+      &:before, &:after{
+        width: 90%;
+      } 
+    }
+    &:before{
+      position: absolute;
+      top:335px; 
+      left:20px;
+      content:""; 
+      width:0%; 
+      height:3px; 
+      background:#000;
+      transition:all .3s ease;
+    }
+    &:after{
+      position: absolute; 
+      top:10px; 
+      right:20px; 
+      content:""; 
+      width:0%; 
+      height:3px; 
+      background:#000;
+      transition:all .3s ease;
+    }
+    h1{
+      margin: 100px 0px 0px 40px;
+      position:absolute; 
+      left:-18px;
+      top:30px; 
+      transform:translateX(-120%);
+      transition:all .5s ease;
+    }
+    button{
+      margin: 90px 0px 0px 40px;
+      position:absolute; 
+      left:112px;
+      top:100px; 
+      transform:translateX(-334%); 
+      transition:all .4s ease;  
+    }
+  }
+  .destacados-3{
+    display: block;
+    margin-right: auto;
+    margin-left: -280px;
+    overflow: hidden;
+    position:relative; 
+    top:125px; 
+    width: 330px; 
+    height:330px; 
+    background:url("../multimedia/destacados-3.jpeg"); 
+    background-size:100% 100%;
+    overflow:hidden;
+    color:#000;
+    border: 2px solid #3f4042;
+    &:hover{
+      background-image: linear-gradient(rgba(169,50,38,0.8),rgba(169,50,38,0.8)), url("../multimedia/destacados-3.jpeg");
+      background-size: 110% 110%;
+      transition:all .5s ease;
+      h1, button{
+        transform:translateX(0%); 
+        transition:all .3s ease;
+      }
+      &:before, &:after{
+        width: 90%;
+      } 
+    }
+    &:before{
+      position: absolute;
+      top:335px; 
+      left:20px;
+      content:""; 
+      width:0%; 
+      height:3px; 
+      background:#000;
+      transition:all .3s ease;
+    }
+    &:after{
+      position: absolute; 
+      top:10px; 
+      right:20px; 
+      content:""; 
+      width:0%; 
+      height:3px; 
+      background:#000;
+      transition:all .3s ease;
+    }
+    h1{
+      margin: 100px 0px 0px 40px;
+      position:absolute; 
+      left:-18px;
+      top:30px; 
+      transform:translateX(-120%);
+      transition:all .5s ease;
+    }
+    button{
+      margin: 90px 0px 0px 40px;
+      position:absolute; 
+      left:112px;
+      top:100px; 
+      transform:translateX(-334%); 
+      transition:all .4s ease;  
+    }
+  }    
+}
+/*MARCAS*/
+.fondoMarcas{
+  @include bg-marcas;
+}
+#proveedores{
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; 
+  height: 350px; 
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;  
+  .tituloMarcas{
+    @include titulo-hueso;
+    margin-top: 60px;
+    margin-left: 30px; 
+  }
+  img{
+    max-width: 18%;
+    margin-left: 75px;
+  }
+}
+/*FOOTER*/
+#footer{
+  padding-left: 170px;
+  .textFa{
+  text-align: center;
+  font-size: .8rem;
+  }
+  .texFi{
+    text-align: center;
+    font-size: .8rem;
+    color: $color-bgBlack;
+    &:hover {
+    color: $color-title-menu;
+    text-decoration: none;
+    }
+  }
+  .iconRedes{
+    color: $color-bordo;
+  }
+}
+/*PARRILLAS*/
+.ml-5 {
+  margin-left: 4rem;
+} 
+#seccionTres.img-1{
+  background-image: url("../multimedia/bgwood.jpg");
+}  
+#seccionTres{
+  width: 100%;
+  margin: auto;
+  padding-top: 130px; 
+  display: flex;
+  flex-direction: column;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .tituloDestacados{
+    @include titulo-hueso;
+    margin-top: 60px;
+    padding-left: 30px;
+  }
+  .row{
+    margin-left: 26px;
+    .card{
+      border: 1px solid $color-bordo;
+      width: 13rem;
+      height: 300px;
+      overflow: hidden;
+      margin-bottom: 50px;
+      .tituloCarDes{
+        @include tex-ti;
+      }
+      .textCardDes{
+        @include tex-al;
+      }
+      &:hover{
+        background-image: linear-gradient(rgba(169,50,38,0.8),rgba(169,50,38,0.8));
+        background-size: 208px 30px;
+        transition:all .5s ease;
+        button{
+          transform:translateX(0%); 
+          transition:all .3s ease;
+        }
+        .tituloCarDes, .textCardDes{
+          display: none;
+        }
+        &:before, &:after{
+          width: 90%;
+        }     
+      }
+      &:before{
+        position: absolute;
+        top:335px; 
+        left:20px;
+        content:""; 
+        width:0%; 
+        height:3px; 
+        background:#000;
+        transition:all .3s ease;    
+      }
+      &:after{
+        position: absolute; 
+        top:10px; 
+        right:20px; 
+        content:""; 
+        width:0%; 
+        height:3px; 
+        background:#000;
+        transition:all .3s ease;    
+      }
+      button{
+        margin: 133px 0px 0px 44px;
+        position: absolute;
+        left: 26px;
+        top: 100px;
+        transform:translateX(-334%); 
+        transition:all .4s ease;       
+      } 
+    }
+  }
+}
+/*SECCION SALAMANDRAS*/
+.ml-5 {
+  margin-left: 4rem;
+} 
+#seccionTres.img-1{
+  background-image: url("../multimedia/bgwood.jpg");
+}  
+#seccionTres{
+  width: 100%;
+  margin: auto;
+  padding-top: 130px; 
+  display: flex;
+  flex-direction: column;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .tituloDestacados{
+    @include titulo-hueso;
+    margin-top: 60px;
+    padding-left: 30px;
+  }
+  .row{
+    margin-left: 26px;
+    .card{
+      border: 1px solid $color-bordo;
+      width: 13rem;
+      height: 300px;
+      overflow: hidden;
+      margin-bottom: 50px;
+      .tituloCarDes{
+        @include tex-ti;
+      }
+      .textCardDes{
+        @include tex-al;
+      }
+      &:hover{
+        background-image: linear-gradient(rgba(169,50,38,0.8),rgba(169,50,38,0.8));
+        background-size: 208px 30px;
+        transition:all .5s ease;
+        button{
+          transform:translateX(0%); 
+          transition:all .3s ease;
+        }
+        .tituloCarDes, .textCardDes{
+          display: none;
+        }
+        &:before, &:after{
+          width: 90%;
+        }     
+      }
+      &:before{
+        position: absolute;
+        top:335px; 
+        left:20px;
+        content:""; 
+        width:0%; 
+        height:3px; 
+        background:#000;
+        transition:all .3s ease;    
+      }
+      &:after{
+        position: absolute; 
+        top:10px; 
+        right:20px; 
+        content:""; 
+        width:0%; 
+        height:3px; 
+        background:#000;
+        transition:all .3s ease;    
+      }
+      button{
+        margin: 133px 0px 0px 44px;
+        position: absolute;
+        left: 26px;
+        top: 100px;
+        transform:translateX(-334%); 
+        transition:all .4s ease;       
+      } 
+    }
+  }
+}
+/*SECCIÓN INSTALACIONES*/
+.fondoInsta{
+   @include bg-instalaciones;
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed; 
+}
+#introInsta{
+  padding-top: 125px;  
+  width: 100%;
+  height:450px;  
+  #introInsta .titulo{
+    margin-bottom:45px;
+    margin-left: 30px; 
+    color: $color-bgBlack;    
+  }
+  .tituloIns{
+    @include titulo-hueso(#000);
+    margin-left: 30px; 
+  }
+  .textIns{
+    @include text-his(#000);
+    margin-bottom: 30px;  
+    margin-left: 30px; 
+  }
+} 
+
+#galeria {
+  .tituloServicio{
+    @include subtitulo-rojo;
+     margin-top: 55px; 
+     margin-left: 50px;
+  }
+  .col-lg-4{
+    margin: 0!important;
+    padding: 25px;
+  }
+  img{
+    width: 100%;
+    height: 250px;
+    &:hover{
+      border: 5px solid #fff;
+    }
+  }
+}   
+#servicios{
+  width: 100%;
+  margin: auto;
+  min-height: 113px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  overflow:hidden;
+  padding-left: 25px;
+  .tituloServicio{
+    @include subtitulo-rojo;
+    margin-top: 55px; 
+    margin-left: 50px;
+  } 
+  .card{
+    margin-left: 10px;
+    img{
+      @include efecto;
+      &:hover{
+        @include efecto-hover;
+      }
+    }
+    .botton{
+      margin-left: 57px;
+      margin-top: 160px;
+      background-color: $color-bordo;
+      border-color: $color-red;
+      &:hover{
+        background-color: $color-hover;
+      }
+    } 
+  } 
+}          
+/*SECCION CONTACTO*/
+#contacto{
+  height: 550px;
+  display: grid;
+  grid-template-areas: 
+  ". rel suc map ."
+  ". relt suct map ."
+  ". tel mai map ."
+  ". telt mait map .";
+  grid-template-rows: 237px 105px 71px 45px;
+  grid-template-columns: 189px 298px 165px 352px 250px;
+  grid-column-gap: 1%;
+  grid-row-gap: 2%;
+  justify-items: center;
+  align-items:center;
+  background-color: $color-white;
+  .reloj{
+    grid-area: rel;
+    justify-self: stretch;
+    padding-top: 185px;
+    text-align: center;
+    margin-left: 15px;
+  }
+  .relojText{
+    grid-area: relt;
+    justify-self: center;
+    padding-top: 20px;
+    text-align: center;
+    margin-left: 70px;
+    .titleDos{
+      @include title-contact;
+    }
+    .textoDos{
+       @include text-contact;
+    }
+  }    
+  .sucursal{
+    grid-area: suc;
+    justify-self: stretch;
+    padding-top: 185px;
+    text-align: center;
+    margin-right: 298px;  
+  }
+  .sucursalText{
+    grid-area: suct;
+    justify-self: center;
+    padding-top: 20px;
+    text-align: center;
+    margin-right: 20px;
+    .titleDos{
+      @include title-contact;
+    }
+    .textoDos{
+      @include text-contact;
+    }
+  } 
+  hr{
+    width: 360px;
+    border: 1px solid #3f4042;
+    margin-top: 500px;
+    margin-left: 300px;
+  }  
+  .line-2{
+    height: 310px;
+    width: 0;
+    border: 1px solid #3f4042;
+    margin-top: 464px;
+    margin-right: 1293px;
+  } 
+  .telefono{
+    grid-area: tel;
+    justify-self: stretch;
+    text-align: center;
+    margin-left: 13px; 
+  }
+  .telefonoText{
+    grid-area: telt;
+    justify-self: center;
+    padding-top: 20px;
+    text-align: center;
+    margin-left: 70px;
+    .titleDos{
+      @include title-contact;
+    }
+    .textoDos{
+      @include text-contact;
+    }
+  }    
+  .mail{
+    grid-area: mai;
+    justify-self: stretch;
+    text-align: center;
+    margin-right: 293px; 
+  }
+  .mailText{
+    grid-area: mait;
+    justify-self: center;
+    padding-top: 20px;
+    text-align: center;
+    margin-right: 11px;  
+    .titleDos{
+      @include title-contact;
+    }
+    .textoDos{
+      @include text-contact;
+    }
+  }    
+  .map{
+    grid-area: map;
+    justify-self: stretch;
+    margin-left: 13px; 
+    margin-top: 13px; 
+    width:400px;
+    height:134px;  
+  }
+}
+.botonShop{
+    color: $color-bordo;
+    padding-top: 60px;
+    padding-left: 60px;
+}
+#gFormularios{
+  width: 100%;
+  height: 460px;
+  display: grid;
+  grid-template-areas: 
+  ". tex tex ."
+  ". nom men ."
+  ". serv men ."
+  ". ads footer .";
+  grid-template-columns: .9fr 0fr 2fr 0.3fr;
+  grid-template-rows: 43fr 20fr 19fr 30fr;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+  justify-items: center;
+  background-image: linear-gradient(90deg, rgba(84,84,84,1) 1%, rgba(84,84,84,0.9009978991596639) 55%), url("../multimedia/fgris.jpg");
+  margin-top: 20px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .fText{
+    grid-area: tex;
+    justify-self: stretch;
+    padding-top: 58px;
+    text-align:center;
+    font-size: 2.5rem; 
+    font-style: normal;
+    font-weight: bold;
+    color: $color-bordo;
+    margin-right: 185px;
+  }
+  .nombre{
+    grid-area: nom;
+    justify-self: stretch;
+    background-color: $bg-form;
+    width: 400px;
+    height: 61px;
+    border: 2px solid $border-form;
+  }
+  .estilotextarea{
+    background-color: $bg-form;
+    width:395px;
+    height: 130px;
+    border: none;
+  }
+  .correo{
+    grid-area: serv;
+    justify-self: stretch;
+    background-color: $bg-form;
+    width: 400px;
+    height: 61px;
+    border: 2px solid $border-form;
+  }
+  .opciones{
+    grid-area: ads;
+    justify-self: stretch;
+    background-color: $bg-form;
+    width: 400px;
+    height: 61px;
+    border: 2px solid $border-form;
+  }
+  .mensaje{
+    grid-area: men;
+    justify-self: stretch;
+    background-color: $bg-form;
+    width:400px;
+    height:134px;
+    border: 2px solid $border-form;
+  }
+  .botonFo{
+    grid-area: footer;
+    justify-self: stretch;  
+   .enviar{
+    width:406px;
+    height:39px;
+    background-color: $bg-form;
+    margin-bottom: 9px;
+    border: 2px solid $border-form;
+    }
+    .sus{
+      text-align: left;
+    }
+  }  
+}
+.recuadro{
+    background-color: $bg-form;
+    border: none;
+    width: 390px;
+    height: 50px;
+}      
+@media all and (max-width: 768px){
+  .navbar-toggler {
+    border-color: $color-red;
+    margin-top: -52px;
+    margin-left: 192px;
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+  .non{
+    display: none;
+  }
+  .w-100 {
+    width: 100%;
+    height: 400px;
+  }
+  .tituloHueso{
+    text-align:  center;
+  }
+  .textHis{
+    text-align: center;
+  }
+  #seccionDos{
+    width: 100%;
+    margin: auto;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    padding-left: 240px;
+    overflow: hidden;
+  }
+  #seccionTres{
+    width: 100%;
+    margin: auto;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    padding-left: 214px;
+    overflow: hidden;
+  }
+  #seccionTres{
+    height: 600px;
+  }
+  #seccionTres .tituloHueso{
+    padding-right: 0px;
+  }
+  #seccionTres .row{
+     margin-left: 14px;
+  }
+  #seccionTres .boton {
+    justify-self: stretch;
+    margin-left: 40px;
+    margin-top: 9px;
+  }
+  #seccionCuatro{
+    width: 100%;
+    height: 400px;
+  }
+  #seccionCuatro{
+    width: 100%;
+    margin: auto;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+  }
+  #seccionCuatro .titulo{
+    margin-left: 40px;
+    align-self: center;
+  }
+  #seccionCuatro .row{
+     margin-left: 230px;
+  }
+  #footer{
+    padding-left: 90px;
+  }
+  .textFa{
+    text-align: center;
+    font-size: .5rem;
+  }
+  .texFi{
+    text-align: center;
+    font-size: .5rem;
+    color: $color-bgBlack;
+  }
+  #footer .font-weight-bold{
+    font-size: .5rem;
+  }
+  iframe{
+    width: 100px; 
+    height: 100px;
+  }
+  /*PARRILLAS*/
+  .fondoParrilla{
+  background-size: cover;
+  background-position: center;
+  }
+  #introParrillas{
+    padding-top: 125px;     
+  }
+  #introParrillas .titulo{
+    margin-bottom:45px;
+    margin-left: 30px;     
+  }
+  #introParrillas .textHis{
+    margin-bottom: 30px;  
+    margin-left: 30px;  
+  }
+  #productosPard{
+    height: 550px;
+  }
+  #productosParu .titulo{
+    padding-top: 20px;
+    padding-left: 210px;
+  }
+  #productosPard .titulo{
+    padding-top: 85px;
+    padding-left: 230px;
+  }  
+  .box img {
+    max-width: 51%;
+    margin-left: 210px;
+  }
+  /*SALAMANDRAS*/
+  #productosSald{
+    height: 600px;
+  }
+  #productosSalu .titulo{
+    padding-top: 20px;
+    padding-left: 210px;
+  }
+  #productosSald .titulo{
+    padding-top: 85px;
+    padding-left: 230px;
+  } 
+  /*INSTALACIONES*/
+  #servicios .titulo{
+    padding-left: 205px;
+  } 
+  #servicios .row{
+     margin-left: 154px;
+  }
+  /*CONTACTO*/
+  #contacto {
+    width: 100%;
+    height: 360px;
+    display: grid;
+    grid-template-areas:
+    "rel"
+    "relt";
+    grid-template-columns: auto;
+    grid-template-rows: 258px 410px;
+    justify-items: center;
+    align-items: center;
+    background-color: $color-white;
+  }
+  .reloj{
+    grid-area: rel;
+    justify-self: stretch;
+    padding-top: 100px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .relojText{
+    grid-area: relt;
+    justify-self: center;
+    padding-bottom: 370px;
+    text-align: center;
+    margin-left: 40px;
+  }
+  .botonShop{
+    padding-left: 10px;
+    font-size: 3rem;
+}
+  .relojText .titleDos{
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 30px;
+  }
+  .relojText .textoDos{
+    font-size: .7rem;
+    font-style: normal;
+    margin-right: 30px;
+  } 
+#gFormularios{
+    width: 100%;
+    height: 665px;
+    display: grid;
+    grid-template-areas: 
+          "tex"
+          "nom"
+          "serv"
+          "men"
+          "ads"
+          "footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 31fr 26fr 24fr 48fr 21fr 75fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    justify-items: center;
+    align-items: center;
+    background-color: $color-hueso; 
+    overflow: hidden; 
+    padding-left: 25px;
+  }
+    .fText{
+        padding-top: 58px;
+        text-align: center;
+        font-size: 1.5rem; 
+        margin-right: 185px;
+        margin-top: 7px;
+        margin-left: 275px;
+        margin-bottom: 30px;
+    }
+  .nombre{
+    justify-self: stretch;  
+    width: 300px;
+    height: 65px;
+    border: 1px solid $border-form;
+    margin-top: 9px;
+    margin-left: 205px;
+  }
+  .recuadro{
+    width: 297px;
+    height: 61px; 
+  }
+  .estilotextarea{
+    width: 295px;
+    height: 125px;
+    border: none;
+  }
+  .correo{
+    justify-self: stretch;
+    width: 300px;
+    height: 65px;
+    border: 1px solid $border-form;
+    margin-left: 205px;
+    margin-top: 9px;
+  }
+  .opciones{
+    justify-self: stretch;
+    width: 300px;
+    height: 65px;
+    border: 1px solid $border-form;
+    margin-left: 205px;
+    margin-top: 9px;
+  }
+  .mensaje{
+    justify-self: stretch;
+    width:300px;
+    height:133px;
+    margin-top: 9px;
+    margin-left: 205px;
+    margin-top: 9px;
+  }
+  .boton{
+    justify-self: stretch; 
+    margin-left: 205px;
+    margin-top: 9px;  
+  }
+  .enviar{
+    width: 300px;
+    height: 46px;
+    margin-bottom: 9px;
+    border: 2px solid $border-form;
+    margin-left: 204px;
+  }
+  .sus{
+    text-align: stretch;
+    font-size: .8rem;    
+  }
+}
+@media all and (max-width: 576px){
+  .navbar-toggler {
+    border-color: $color-red;
+    margin-top: -52px;
+    margin-left: 192px;
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+  #header{
+    margin-top:0;
+  }
+   #header .logo{
+    height: 40px;
+    width: 90px;
+  }
+  .non{
+    display: none;
+  }
+  .es-non {
+    margin-top: 50px;
+    width: 360px;
+  }
+  .tituloHueso{
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: bold;
+    color: $color-hueso;
+    text-align:  center;
+  }
+  .textHis{
+    display: inline-block;
+    font-size: .8rem; 
+    font-style: normal;
+    text-align: center;
+    color: $color-hueso;
+  }
+  #seccionDos{
+    width: 100%;
+    margin: auto;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    padding-left: 32px;
+    overflow: hidden;
+  }
+  #seccionTres, #seccionCuatro{
+    width: 100%;
+    margin: auto;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    overflow: hidden;
+  }
+  #seccionTres .tituloHueso{
+    padding-left: 20px;
+  }
+  #seccionCuatro{
+    height: 300px;
+  }
+  .tituloRojo{
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: bold;
+    text-align:  center;
+    color: $color-bordo;
+  }
+  .card-img{
+    width: 209px;
+  }
+  .botton{
+    margin-top: 92px;
+    margin-left: 38px;
+  }
+  #footer{
+    padding-left: 90px;
+  }
+  .textFa{
+    text-align: center;
+    font-size: .5rem;
+  }
+  .texFi{
+    text-align: center;
+    font-size: .5rem;
+    color: $color-bgBlack;
+  }
+  #footer .font-weight-bold{
+    font-size: .5rem;
+  }
+  iframe{
+    width: 100px; 
+    height: 100px;
+  }
+  /*PARRILLAS*/
+  .fondoParrilla{
+  background-image: $gradiente-imagenes;
+  background-size: cover;
+  background-position: center;
+  }
+  #introParrillas{
+    padding-top: 125px;     
+  }
+  #introParrillas .titulo{
+    margin-bottom: 10px;
+    margin-left: 0;     
+  }
+  #introParrillas .textHis{
+    margin-bottom: 30px;  
+    margin-left: 5px;  
+  }
+  #productosParu, #productosPard{
+    height: 350px;
+  }
+  #productosParu .titulo{
+    padding-top: 20px;
+    padding-left: 45px;
+    font-size: 1.5em;
+  }
+  #productosPard .titulo{
+    padding-top: 25px;
+    padding-left: 60px;
+    font-size: 1.5em;
+  }  
+  .box img {
+    max-width: 51%;
+    margin-left: 90px;
+  }
+  /*SALAMANDRAS*/
+  #introSalamandra .textHis {
+    margin-left: 0px;
+  }
+  #introSalamandra .titulo {
+    margin-bottom: 15px;
+    margin-left: 2px;
+  }
+  #productosSalu{
+    height: 350px;
+  }
+  #productosSald{
+    height: 350px;
+  }
+   #productosSalu .titulo{
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  #productosSald .titulo{
+    padding-top: 36px;
+    padding-left: 35px;
+    font-size: 1.5em;
+  }  
+  /*INSTALACIONES*/
+  #introInsta .titulo {
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+  #introInsta .textHis {
+    margin-left: 7px;
+  }
+  #servicios .titulo{
+    padding-left: 50px;
+  } 
+  #servicios .row{
+     margin-left: -34px;
+  }
+  #servicios .botton {
+    margin-top: 138px;
+  }
+  /*CONTACTO*/
+  #contacto {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-areas:
+    "rel"
+    "relt";
+    grid-template-columns: auto;
+    grid-template-rows: 210px 431px;
+    justify-items: center;
+    align-items: center;
+    background-color: $color-white;
+  }
+  .reloj{
+    grid-area: rel;
+    justify-self: stretch;
+    padding-top: 65px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .relojText{
+    grid-area: relt;
+    justify-self: center;
+    padding-bottom: 370px;
+    text-align: center;
+    margin-left: 40px;
+  }
+  .botonShop{
+    padding-left: 10px;
+    font-size: 3rem;
+}
+  .relojText .titleDos{
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 30px;
+  }
+  .relojText .textoDos{
+    font-size: .7rem;
+    font-style: normal;
+    margin-right: 30px;
+  }
+   #gFormularios{
+    width: 100%;
+    height: 560px;
+    display: grid;
+    grid-template-areas: 
+          "tex"
+          "nom"
+          "serv"
+          "men"
+          "ads"
+          "footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 31fr 26fr 24fr 48fr 21fr 75fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    justify-items: center;
+    align-items: center;
+    background-color: $color-hueso; 
+    overflow: hidden;
+    padding-left:10px; 
+  }
+  .fText{
+    padding-top: 58px;
+    text-align: center;
+    font-size: 1.5rem; 
+    margin-right: 185px;
+    margin-top: 7px;
+    margin-left: 82px;
+    margin-bottom: -5px;
+  }
+  .nombre{
+    justify-self: stretch;  
+    width: 200px;
+    height: 45px;
+    border: 1px solid;
+    margin-top: 9px;
+    margin-left: 70px;
+  }
+  .recuadro{
+    width: 195px;
+    height: 40px;
+  }
+  .estilotextarea{
+    width: 195px;
+    height: 105px;
+    border: none;
+  }
+  .correo{
+    justify-self: stretch;
+    width: 200px;
+    height: 45px;
+    border: 1px solid $border-form;
+    margin-left: 70px;
+    margin-top: 9px;
+  }
+  .opciones{
+    justify-self: stretch;
+    width: 200px;
+    height: 45px;
+    border: 1px solid $border-form;
+    margin-left: 70px;
+    margin-top: 9px;
+  }
+  .mensaje{
+    justify-self: stretch;
+    width:200px;
+    height:113px;
+    margin-top: 9px;
+    margin-left: 69px;
+  }
+  .boton{
+    justify-self: stretch; 
+    margin-left: 70px;
+    margin-top: 9px;  
+  }
+  .enviar{
+    width: 201px;
+    height: 30px;
+    margin-bottom: 11px;
+    border: 2px solid $border-form;
+    margin-left: 70px;
+    margin-top: 9px;
+  }
+  .sus{
+    text-align: stretch;
+    font-size: .8rem; 
+    margin-left: 70px;   
+  }
+}
+

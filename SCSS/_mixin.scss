@@ -1,0 +1,84 @@
+
+@mixin bg-white {
+    background-color: $color-white;
+    height: 400px;
+}
+@mixin bg-hueso {
+    background-color: $color-hueso;
+    color: $color-bgBlack;
+    height: 400px;
+}
+@mixin bg-madera{
+    background-image: url("../multimedia/bgwood.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+@mixin bg-marcas{
+    background-image: $gradiente-imagenes;
+    background-size: cover;
+    background-position: center;
+}
+@mixin bg-historia {
+    background-image: $gradiente-local;
+    background-position: center;    
+}
+@mixin bg-instalaciones{
+    background-image: $gradiente-imagenes-grey;
+    background-size: cover;
+    background-position: center;
+}
+@mixin titulo-hueso($colhue: #f1eeee){
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: bold;
+    color: $colhue;    
+}
+@mixin titulo-rojo {
+    font-size: 2.5rem; 
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    color: $color-bordo;    
+}
+@mixin subtitulo-rojo{
+    font-size: 1.8rem; 
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    color: $color-bordo;    
+}
+@mixin text-his ($colhis: #FCF3CF){
+    display: inline-block;
+    font-size: 1.2rem; 
+    font-style: normal;
+    text-align: left;
+    color: $colhis;
+}
+@mixin tex-ti{
+    text-align: center;
+    font-size: .9rem;
+}
+@mixin tex-al{
+    text-align: center;
+    font-size: .8rem;
+    color: $color-title-menu;
+} 
+@mixin title-contact{
+    font-size: .8rem;
+    font-style: normal;
+    font-weight: bold;
+}
+@mixin text-contact{
+    font-size: .5rem;
+    font-style: normal;
+}
+@mixin efecto {
+    border-style: solid;
+    transition: all 0.5s linear;    
+}
+@mixin efecto-hover {
+    transform: scale(0.9);   
+}
+    
+
